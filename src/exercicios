@@ -1,0 +1,22 @@
+(Comparando Strings) Elabore um aplicativo que utiliza o método String compareTo para comparar duas entradas de strings pelo
+usuário. Crie uma saída informando se a primeira string é menor que, igual a ou maior que a segunda.
+
+(Comparando partes de Strings) Elabore um aplicativo que utiliza o método String regionMatches para comparar duas entradas de strings pelo usuário. 
+O aplicativo deve inserir o número de caracteres que será comparado e o índice inicial da comparação. O
+aplicativo deve declarar se as strings são iguais. Ignore a distinção entre maiúsculas e minúsculas dos caracteres ao realizar a comparação.
+
+14.5 (Sentenças aleatórias) Elabore um aplicativo que utiliza geração de números aleatórios para criar frases. Utilize quatro arrays de strings
+chamados article, noun, verb e preposition. Crie uma frase selecionando uma palavra aleatoriamente de cada array na seguinte
+ordem: article, noun, verb, preposition, article e noun. À medida que cada palavra é selecionada, concatene-a às primeiras
+palavras na frase. As palavras devem ser separadas por espaços. Quando a frase final for enviada para saída, ela deve iniciar com uma letra
+maiúscula e terminar com um ponto. O aplicativo deve gerar e exibir 20 frases.
+O array de artigos deve conter os artigos "the", "a", "one", "some" e "any"; o array de substantivos deve conter os substantivos
+"boy", "girl", "dog", "town" e "car"; o array de verbos deve conter os verbos "drove", "jumped", "ran", "walked" e
+"skipped"; o array de preposições deve conter as preposições "to", "from", "over", "under" e "on".
+
+14.6 (Projeto: Limericks) Um limerick é um poema humorístico de cinco versos em que a primeira e a segunda linha rimam com a quinta, e a
+terceira linha rima com a quarta. Utilizando técnicas semelhantes àquelas desenvolvidas na Questão 14.5, elabore um aplicativo Java que
+produz limericks aleatórios. Polir esse aplicativo para produzir bons limericks é um problema desafiador, mas o resultado vale o esforço!
+
+14.7 (Latim de porco) Elabore um aplicativo que codifica frases da língua inglesa em latim de porco. O Pig Latin é uma forma de linguagem
+codificada. Há muitos métodos diferentes para formar frases em Pig Latin. Para simplificar, utilize o seguinte algoritmo:
