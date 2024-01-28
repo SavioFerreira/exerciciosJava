@@ -61,19 +61,17 @@ public class GerandoFrasesAleatoriasComArrays{
         return fraseMontada;
     }
 
-    public static void mostrarFrases(String... frases){
+    public static void mostrarFrases(){
         for (int i=0; i < 20; i++ ) {
             System.out.println(gerarFrase() + "\n");
         }
-        
     }
 
 
     public static void main(String[] args) {
 
         System.out.println("\t\tCriando palavras aleatórias\n");
-        mostrarFrases(gerarFrase());
-        
+        mostrarFrases();
     }
 }
 
