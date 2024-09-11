@@ -1,44 +1,38 @@
-##############################
-## Java
-##############################
-.mtj.tmp/
-*.class
-*.jar
-*.war
-*.ear
-*.nar
-hs_err_pid*
-replay_pid*
+arget/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-##############################
-## IntelliJ
-##############################
-out/
-.idea/
-.idea_modules/
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
 *.iml
 *.ipr
-*.iws
 
-##############################
-## Eclipse
-##############################
-.settings/
-bin/
-tmp/
-.metadata
+### Eclipse ###
+.apt_generated
 .classpath
-.project
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.loadpath
 .factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-##############################
-## Visual Studio Code
-##############################
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
 .vscode/
-.code-workspace
+
+### Mac OS ###
+.DS_Store
