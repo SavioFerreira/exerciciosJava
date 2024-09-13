@@ -1,6 +1,8 @@
-package entity.person;
+package entity.person.pj;
 
-public class LegalPerson extends Person{
+import entity.person.Person;
+
+public abstract class LegalPerson extends Person {
 
     private double annualTurnover;
     private double annualExpense;
@@ -21,10 +23,5 @@ public class LegalPerson extends Person{
 
     public double getAnnualProfit() {
         return getAnnualTurnover() - getAnnualExpense();
-    }
-
-    @Override
-    public double taxCalculate() {
-        return 0;
     }
 }

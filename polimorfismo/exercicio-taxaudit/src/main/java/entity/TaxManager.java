@@ -6,7 +6,8 @@ public class TaxManager {
     private double totalTaxValue;
 
     public void add(Person person) {
-       //TODO descobrir como esse método deve ser feito!
+        System.out.println(person.getName() + ": " + person.taxCalculate());
+        totalTaxValue += person.taxCalculate();
     }
 
     public double getTotalTaxValue() {
