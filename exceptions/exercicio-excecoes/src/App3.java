@@ -1,20 +1,18 @@
+import account.CheckingAccount;
+
 public class App3 {
     public static void main(String[] args) {
         System.out.println("Exceptions");
+        var account = new CheckingAccount("1012");
+        var account2 = new CheckingAccount("1210");
+
+        account.activate();
+        account2.activate();
+
+        account.deposit(500);
+        account.transfer(account2, 550);
+
+        System.out.println("Account " + account.getNumber() + " balance " + account.getBalance());
+        System.out.println("Account " + account2.getNumber() + " balance " + account2.getBalance());
     }
-}
-
-
-public static void main(String[] args) {
-    ContaCorrente conta1 = new ContaCorrente("123");
-    ContaCorrente conta2 = new ContaCorrente("987");
-
-    conta1.ativar();
-    conta2.ativar();
-
-    conta1.depositar(1_000);
-    conta1.transferir(conta2, 1_200);
-
-    System.out.printf("Saldo da conta 1: %.2f%n", conta1.getSaldo());
-    System.out.printf("Saldo da conta 2: %.2f%n", conta2.getSaldo());
 }
