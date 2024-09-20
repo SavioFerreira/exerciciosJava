@@ -8,7 +8,6 @@ public class App3 {
 
         account.activate();
         account2.activate();
-
         account.deposit(500);
         account.transfer(account2, 550);
 
