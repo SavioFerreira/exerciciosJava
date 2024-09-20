@@ -1,5 +1,8 @@
 package account;
 
+import exceptions.InactiveAccountException;
+import exceptions.InsufficientBalanceException;
+
 public class CheckingAccount {
 
     private String number;
@@ -34,45 +37,39 @@ public class CheckingAccount {
         this.active = false;
     }
 
-    public boolean withdraw(double value) {
-        if (value <= 0) {
-            System.out.println("Withdrawal amount must be greater than 0");
-            return false;
-        }
+    public boolean withdraw(double value) throws Exception {
 
-        if (value > this.balance) {
-            System.out.println("Account without balance");
-            return false;
-        }
+            if (value <= 0) {
+                throw new IllegalArgumentException("Withdrawal amount must be greater than 0");
+            }
+            if (value > this.balance) {
+                throw new InsufficientBalanceException("Account without balance");
+            }
 
-        if (isInactive()) {
-            System.out.println("Inactive account");
-            return false;
-        }
+            if (isInactive()) {
+                throw new InactiveAccountException("Inactive account");
+            }
 
-        this.balance -= value;
-        return true;
+            this.balance -= value;
+            return true;
     }
 
-    public boolean deposit(double valor) {
+    public boolean deposit(double valor) throws Exception {
         if (valor <= 0) {
-            System.out.println("Deposit amount must be greater than 0");
-            return false;
+            throw new IllegalArgumentException("Deposit amount must be greater than 0");
         }
 
         if (isInactive()) {
-            System.out.println("Inactive account");
-            return false;
+            throw new InactiveAccountException("Inactive account");
         }
 
         this.balance += valor;
         return true;
     }
 
-    public boolean transfer(CheckingAccount destinationAccount, double value) {
+    public boolean transfer(CheckingAccount destinationAccount, double value) throws Exception {
         if (destinationAccount.isInactive()) {
-            System.out.println("Target account is inactive");
-            return false;
+            throw new InactiveAccountException("Target account is inactive");
         }
 
         if (withdraw(value)) {
