@@ -1,10 +1,11 @@
-package domain;
+package comparacaoGenerics;
 
-import java.util.ArrayList;
+import domain.Produto;
+
 import java.util.Objects;
 import java.util.Random;
 
-public class Sorteador {
+public class SorteadorSemGenerics {
 
     static final Random RANDOM = new Random();
 
