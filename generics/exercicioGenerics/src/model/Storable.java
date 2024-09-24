@@ -1,6 +1,6 @@
 package model;
 
-public interface Storable {
+public interface Storable  {
 
      int getStockQuantity();
 }

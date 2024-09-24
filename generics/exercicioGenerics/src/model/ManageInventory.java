@@ -1,10 +1,10 @@
 package model;
 
-public class ManageInventory {
+public class ManageInventory<T extends Storable> {
 
     int total;
 
-    public void add(Storable storable) {
+    public void add(T storable) {
         total += storable.getStockQuantity();
     }
 

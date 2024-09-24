@@ -6,7 +6,6 @@ public class DrumstickStock implements Storable {
 
     DrumStickBrands brand;
     int quantity;
-    int stockTotal;
 
     public DrumstickStock(DrumStickBrands brand, int quantity) {
         this.brand = brand;
@@ -21,10 +20,6 @@ public class DrumstickStock implements Storable {
         this.brand = brand;
     }
 
-    public int getStockTotal() {
-        return stockTotal;
-    }
-
     public int getQuantity() {
         return quantity;
     }
@@ -33,13 +28,9 @@ public class DrumstickStock implements Storable {
         this.quantity = quantity;
     }
 
-    public void setStockTotal(int stockTotal) {
-        this.stockTotal = stockTotal;
-    }
-
     @Override
     public int getStockQuantity() {
-        return getStockTotal();
+        return getQuantity();
     }
 
     @Override

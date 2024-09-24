@@ -3,8 +3,6 @@ package model;
 public class DrumCymbalStock  implements Storable {
     String model;
     int quantity;
-    int stockTotal;
-
 
     public DrumCymbalStock(String model, int quantity) {
         this.model = model;
@@ -19,10 +17,6 @@ public class DrumCymbalStock  implements Storable {
         this.model = model;
     }
 
-    public int getStockTotal() {
-        return stockTotal;
-    }
-
     public int getQuantity() {
         return quantity;
     }
@@ -31,13 +25,9 @@ public class DrumCymbalStock  implements Storable {
         this.quantity = quantity;
     }
 
-    public void setStockTotal(int stockTotal) {
-        this.stockTotal = stockTotal;
-    }
-
     @Override
     public int getStockQuantity() {
-        return getStockTotal();
+        return getQuantity();
     }
 
     @Override
