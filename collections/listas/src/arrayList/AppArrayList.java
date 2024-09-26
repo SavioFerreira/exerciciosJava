@@ -14,13 +14,6 @@ public class AppArrayList {
                         "Usopp", "Franky", "Nami", "Robin", "Brook", "Jinbe"
                 )
         );
-
-        for (int i = 0; i < nomes.size(); i++) {
-            if (nomes.get(i).equalsIgnoreCase("nami")) {
-                nomes.set(nomes.indexOf(nomes.get(i)), nomes.get(i).toUpperCase());
-            }
-            System.out.println(nomes.get(i));
-        }
         System.out.println("\n" + nomes);
 
         nomes.remove("Savio");
