@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-public class CymbalKit {
+public class CymbalKit implements Comparable<CymbalKit>{
 
     private String description;
     private double pricePerCymbal;
@@ -35,15 +35,29 @@ public class CymbalKit {
     }
 
     @Override
+    public int compareTo(CymbalKit o) {
+        return getDescription().compareTo(o.getDescription());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CymbalKit cymbalKit = (CymbalKit) o;
+        return Objects.equals(description, cymbalKit.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(description);
+    }
+
+    @Override
     public String toString() {
         return "DrumKit Cymbals{" +
                 "description='" + description + '\'' +
                 ", pricePerCymbal=" + pricePerCymbal +
                 '}';
     }
-
-    // TODO implementar equals e hashCode
-
-    // TODO implementar compareTo
 
 }
