@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SetConjuntos.iml" filepath="$PROJECT_DIR$/SetConjuntos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicioMaps.iml" filepath="$PROJECT_DIR$/exercicioMaps.iml" />
     </modules>
   </component>
 </project>

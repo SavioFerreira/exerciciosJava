@@ -11,7 +11,8 @@ public class App {
                         new DrumstickStock(DrumStickBrands.VIC_FIRTH, 2),
                         new DrumstickStock(DrumStickBrands.LIVERPOOL, 6),
                         new DrumstickStock(DrumStickBrands.ZILDJIAN, 7)
-                ));
+                )
+        );
 
         Set<DrumstickStock> baquetasLinkedHashSet = new LinkedHashSet<>(
                 Arrays.asList(
@@ -20,7 +21,8 @@ public class App {
                         new DrumstickStock(DrumStickBrands.VIC_FIRTH, 2),
                         new DrumstickStock(DrumStickBrands.LIVERPOOL, 6),
                         new DrumstickStock(DrumStickBrands.ZILDJIAN, 7)
-                ));
+                )
+        );
 
         Set<DrumstickStock> baquetasTreeSet = new TreeSet<>(
                 Arrays.asList(
@@ -29,7 +31,8 @@ public class App {
                         new DrumstickStock(DrumStickBrands.VIC_FIRTH, 2),
                         new DrumstickStock(DrumStickBrands.LIVERPOOL, 6),
                         new DrumstickStock(DrumStickBrands.ZILDJIAN, 7)
-                ));
+                )
+        );
 
         Set<DrumstickStock> baquetasTreeSet_quantityOrder = new TreeSet<>(new DrumStickBrandsComparator());
         baquetasTreeSet_quantityOrder.addAll(
@@ -38,7 +41,9 @@ public class App {
                         new DrumstickStock(DrumStickBrands.VATER, 4),
                         new DrumstickStock(DrumStickBrands.VIC_FIRTH, 2),
                         new DrumstickStock(DrumStickBrands.LIVERPOOL, 6),
-                        new DrumstickStock(DrumStickBrands.ZILDJIAN, 7)));
+                        new DrumstickStock(DrumStickBrands.ZILDJIAN, 7)
+                )
+        );
 
 
         System.out.println("Mais performance - Inclui aleatoriamente");
@@ -56,7 +61,5 @@ public class App {
         System.out.println("Menor performance, Inclui na ordem natural (numerica)");
         System.out.println(baquetasTreeSet_quantityOrder);
         System.out.println("--");
-
     }
-
 }
