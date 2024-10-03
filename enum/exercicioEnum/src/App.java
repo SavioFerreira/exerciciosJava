@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) {
-        NotaFiscal nf = new NotaFiscal(123, "Macbook Pro", 18_000);
+        NotaFiscal nf = new NotaFiscal(100, "Kit pratos zeus - kit E", 3_500);
         System.out.println(nf.getDescricaoCompleta());
 
         nf.emitir();
