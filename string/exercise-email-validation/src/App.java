@@ -13,22 +13,22 @@ public class App {
                 "tenis @validation.com", "zoro@ validation.com", "brook@validation .com",
                 "chopa@validation. com", "chopavalidation.com", "@validation.com",
                 "urouge@validation", "chopa@validation.abcdef", "chopper@vali@dation.com",
-                "chopa@validation.co1", "chopa@validation.com", "chopa@validation.com",
+                "chopa@validation.co1", "chopa@Validation.com", "chopa@validation.Com",
                 "chopa.com@validation", "chopa@.com", "chopa@validation.",
                 "zo#rao@validation.com", "luffy@vali#dation.com"
         };
 
         for (String email : validEmails) {
-            if (!EmailValidator.validar(email)) {
+            if (!EmailValidator.validate(email)) {
                 throw new RuntimeException(
-                        String.format("E-mail %s is valid, but the validator returned false", email));
+                        String.format("E-mail \"%s\" is valid, but the validator returned false", email));
             }
         }
 
         for (String email : invalidEmails) {
-            if (EmailValidator.validar(email)) {
+            if (EmailValidator.validate(email)) {
                 throw new RuntimeException(
-                        String.format("E-mail %s is invalid, but the validator returned true", email));
+                        String.format("E-mail \"%s\" is invalid, but the validator returned true", email));
             }
         }
 
