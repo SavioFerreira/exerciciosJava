@@ -2,9 +2,9 @@ public class App {
     public static void main(String[] args) {
 
         System.out.println("Email validation exercise");
-        String[] validEmails = { "chopa@validation.com", "monkey_d@validation.com",
-                "chopper.doctor@validation.com", "chopa-marchal@validation.com",
-                "chopA123@validation.com", "Chopa@validation.com",
+        String[] validEmails = { "chopa@doc.br", "monkey_d@luffy.op",
+                "chopper.doctor@validation.com", "chopa-marchal@hat.com",
+                "chopA123@tanuki.nu", "Chopa@pink.op",
                 "chopa@doc.validation.com", "chop@vali-dation.com", "chopa@email.me",
                 "chopa@validation.com"
         };
