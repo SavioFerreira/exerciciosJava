@@ -4,7 +4,7 @@ public class App {
         System.out.println("Email validation exercise");
         String[] validEmails = { "chopa@validation.com", "monkey_d@validation.com",
                 "chopper.doctor@validation.com", "chopa-marchal@validation.com",
-                "chopa123@validation.com", "chopa@validation.com",
+                "chopA123@validation.com", "Chopa@validation.com",
                 "chopa@doc.validation.com", "chop@vali-dation.com", "chopa@email.me",
                 "chopa@validation.com"
         };
