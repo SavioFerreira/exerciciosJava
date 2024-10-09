@@ -1,38 +1,39 @@
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
-        System.out.println("Exercicio com BigDecimal\n");
-        Scanner sc = new Scanner(System.in);
-        BigDecimal valorEntrada = BigDecimal.ZERO;
-        BigDecimal dolar = BigDecimal.ZERO;
+    public static void main(String[] args) throws ParseException {
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Preço do produto em Dólares: ");
+        String precoProdutoDigitado = scanner.nextLine();
 
-        System.out.print("Quantos dólares você vai conveter? ");
-        valorEntrada = sc.nextBigDecimal();
-        System.out.print("Qual o valor do dolar atualmente? ");
-        dolar = sc.nextBigDecimal();
-        System.out.println(formatar(converterDolarParaReal(valorEntrada, dolar)));
+        System.out.print("Preço de 1 Dólar em Real: ");
+        String precoDolarDigitado = scanner.nextLine();
 
-    }
+        DecimalFormat formatadorUs = new DecimalFormat("#,##0.00",
+                new DecimalFormatSymbols(Locale.US));
+        formatadorUs.setParseBigDecimal(true);
 
-    public static BigDecimal converterDolarParaReal(BigDecimal realValue, BigDecimal dolarValue) {
-        return realValue.multiply(dolarValue);
-    }
+        DecimalFormat formatadorBrSemMoeda = new DecimalFormat("#,##0.00",
+                new DecimalFormatSymbols(Locale.of("pt", "BR")));
+        formatadorBrSemMoeda.setParseBigDecimal(true);
 
-    public static String formatar(BigDecimal value){
-        return new DecimalFormat("¤#,###,###;¤#.###").format(value);
-    }
+        NumberFormat formatadorBrComMoeda = new DecimalFormat("¤ #,##0.00",
+                new DecimalFormatSymbols(Locale.of("pt", "BR")));
 
-    public static BigDecimal padraoMonetarioReal() {
-        //TODO  fazer a lógica para receber o valor em dolar e retornar com padrão br
-        return null;
-    }
+        BigDecimal precoProdutoEmDolares = (BigDecimal) formatadorUs.parse(precoProdutoDigitado);
+        BigDecimal precoDolar = (BigDecimal) formatadorBrSemMoeda.parse(precoDolarDigitado);
 
-    public static BigDecimal padraoMonetarioDolar() {
-        //TODO  fazer a lógica para receber o valor em real e retornar com padrão americano
-        return null;
+        BigDecimal precoProdutoEmReais = precoProdutoEmDolares.multiply(precoDolar);
+
+        System.out.printf("Preço do produto em Reais: %s%n",
+                formatadorBrComMoeda.format(precoProdutoEmReais));
     }
 }
+
